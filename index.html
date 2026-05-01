@@ -51,8 +51,26 @@
   .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 72px; }
   .btn-primary { background: var(--orange); color: white; padding: 14px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 15px; transition: background 0.2s, transform 0.15s; }
   .btn-primary:hover { background: var(--orange-dim); transform: translateY(-1px); }
-  .btn-ghost { background: transparent; color: var(--text); padding: 14px 30px; border-radius: 8px; border: 1px solid var(--border); text-decoration: none; font-weight: 600; font-size: 15px; transition: border-color 0.2s, transform 0.15s; }
+  .btn-ghost { background: transparent; color: var(--text); padding: 14px 30px; border-radius: 8px; border: 1px solid var(--border); text-decoration: none; font-weight: 600; font-size: 15px; transition: border-color 0.2s, transform 0.15s; cursor: pointer; }
   .btn-ghost:hover { border-color: #444; transform: translateY(-1px); }
+
+  /* CONTACT SNIPPET */
+  .contact-wrap { position: relative; display: inline-block; }
+  .contact-snippet {
+    display: none; position: absolute; top: calc(100% + 12px); left: 0;
+    background: var(--bg2); border: 1px solid rgba(255,69,0,0.3);
+    border-radius: 14px; padding: 24px 28px; min-width: 300px;
+    z-index: 200; box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  }
+  .contact-snippet.open { display: block; animation: fadeUp 0.2s ease; }
+  @keyframes fadeUp { from { opacity:0; transform:translateY(8px); } to { opacity:1; transform:translateY(0); } }
+  .contact-snippet-title { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--orange); margin-bottom: 16px; }
+  .contact-row { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border); }
+  .contact-row:last-child { border-bottom: none; }
+  .contact-icon { width: 34px; height: 34px; border-radius: 8px; background: rgba(255,69,0,0.1); border: 1px solid rgba(255,69,0,0.2); display: flex; align-items: center; justify-content: center; font-size: 15px; flex-shrink: 0; }
+  .contact-info-text { font-size: 13px; color: var(--text); font-weight: 500; display: block; }
+  .contact-info-sub { font-size: 11px; color: var(--muted); }
+  .contact-row a { text-decoration: none; color: inherit; }
 
   /* HERO STATS */
   .hero-stats { display: grid; grid-template-columns: repeat(5,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; max-width: 860px; }
@@ -191,7 +209,33 @@
   </div>
   <div class="hero-ctas">
     <a href="#work" class="btn-primary">See My Work</a>
-    <a href="mailto:zafeerkhanmalik@gmail.com" class="btn-ghost">Get In Touch →</a>
+    <div class="contact-wrap">
+      <button class="btn-ghost" onclick="toggleSnippet()">Get In Touch →</button>
+      <div class="contact-snippet" id="contactSnippet">
+        <div class="contact-snippet-title">Contact Zafeer</div>
+        <div class="contact-row">
+          <div class="contact-icon">📧</div>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zafeerkhanmalik@gmail.com" target="_blank">
+            <span class="contact-info-text">zafeerkhanmalik@gmail.com</span>
+            <span class="contact-info-sub">Opens Gmail</span>
+          </a>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">📞</div>
+          <a href="tel:+919927031385">
+            <span class="contact-info-text">+91 99270 31385</span>
+            <span class="contact-info-sub">Also available on WhatsApp</span>
+          </a>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon">💼</div>
+          <a href="https://www.linkedin.com/in/zafeer-khan-malik/" target="_blank">
+            <span class="contact-info-text">linkedin.com/in/zafeer-khan-malik</span>
+            <span class="contact-info-sub">LinkedIn Profile</span>
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
   <!-- Headline proof from best result -->
   <div class="hero-stats">
@@ -578,7 +622,7 @@
         <div class="cs-title">9.2M Users in 6 Months.</div>
         <p class="cs-desc">RunPlayGo had early traction but no scalable system. I built a multi-pillar content engine, integrated paid distribution, and led the full team's AI adoption — compounding growth every week for six months straight.</p>
         <div class="cs-quote">"This was not driven by viral luck. It was driven by a system."</div>
-        <a href="mailto:zafeerkhanmalik@gmail.com" class="btn-primary" style="font-size:14px; padding: 12px 24px;">Request Full Case Study →</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zafeerkhanmalik@gmail.com&su=Case Study Request" target="_blank" class="btn-primary" style="font-size:14px; padding: 12px 24px;">Request Full Case Study →</a>
       </div>
       <div class="cs-metrics">
         <div class="cs-metric">
@@ -616,8 +660,8 @@
       <h2>Ready to grow<br>your brand?</h2>
       <p>I'm currently available for new projects and full-time roles in Delhi NCR and Agra. Let's talk.</p>
       <div class="cta-btns">
-        <a href="mailto:zafeerkhanmalik@gmail.com" class="btn-primary">✉ zafeerkhanmalik@gmail.com</a>
-        <a href="https://www.linkedin.com/in/zafeer-khan-malik/" target="_blank" class="btn-ghost">LinkedIn →</a>
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=zafeerkhanmalik@gmail.com" target="_blank" class="btn-primary">✉ zafeerkhanmalik@gmail.com</a>
+        <a href="https://www.linkedin.com/in/zafeer-khan-malik/" target="_blank" rel="noopener noreferrer" class="btn-ghost">LinkedIn →</a>
       </div>
     </div>
   </div>
@@ -630,6 +674,18 @@
 </footer>
 
 <script>
+  // Contact snippet toggle
+  function toggleSnippet() {
+    const s = document.getElementById('contactSnippet');
+    s.classList.toggle('open');
+  }
+  document.addEventListener('click', function(e) {
+    const wrap = document.querySelector('.contact-wrap');
+    if (wrap && !wrap.contains(e.target)) {
+      document.getElementById('contactSnippet').classList.remove('open');
+    }
+  });
+
   // Scroll reveal
   const observer = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
