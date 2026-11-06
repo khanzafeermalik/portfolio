@@ -260,30 +260,29 @@
   }
   .brand-top { display: flex; justify-content: space-between; align-items: flex-start; }
   
-  .brand-logo-circle { 
-    width: 48px; height: 48px; border-radius: 12px; 
-    display: flex; align-items: center; justify-content: center; 
-    background: rgba(245, 242, 235, 0.04); 
-    border: 1px solid rgba(245, 242, 235, 0.1); 
-    flex-shrink: 0; 
-    overflow: hidden; 
-    padding: 8px;
-    transition: border-color 0.2s;
-  }
-  .brand-card:hover .brand-logo-circle {
-    border-color: rgba(245, 242, 235, 0.24);
+  .brand-top { display: flex; justify-content: space-between; align-items: center; min-height: 36px; }
+  
+  .brand-logo-wrap { 
+    display: flex; 
+    align-items: center; 
+    height: 32px; 
+    max-width: 150px; 
   }
   .brand-logo-img {
-    max-width: 100%;
-    max-height: 100%;
+    max-height: 28px;
+    max-width: 140px;
+    width: auto;
+    height: auto;
     object-fit: contain;
+    object-position: left center;
     filter: brightness(0) invert(0.92);
-    opacity: 0.9;
-    transition: filter 0.2s, opacity 0.2s;
+    opacity: 0.92;
+    transition: filter 0.2s, opacity 0.2s, transform 0.2s;
   }
   .brand-card:hover .brand-logo-img {
     filter: brightness(0) invert(1);
     opacity: 1;
+    transform: translateY(-1px);
   }
   
   .brand-featured-tag { 
@@ -552,7 +551,7 @@
       <!-- RunPlayGo -->
       <div class="brand-card featured reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/runplaygo.png" alt="RunPlayGo" class="brand-logo-img">
           </div>
           <span class="brand-featured-tag">⭐ Flagship Growth</span>
@@ -596,7 +595,7 @@
       <!-- Makson Lifestyle -->
       <div class="brand-card featured reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/makson.png" alt="Makson Lifestyle" class="brand-logo-img">
           </div>
           <span class="brand-featured-tag">⭐ Founder's Office</span>
@@ -631,7 +630,7 @@
       <!-- Seeds of Champa -->
       <div class="brand-card reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/seedsofchampa.png" alt="Seeds of Champa" class="brand-logo-img">
           </div>
           <span class="brand-featured-tag">Founder Partnership</span>
@@ -656,7 +655,7 @@
       <!-- Personiv -->
       <div class="brand-card reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/personiv.png" alt="Personiv" class="brand-logo-img">
           </div>
         </div>
@@ -685,7 +684,7 @@
       <!-- BlueFlowerCo -->
       <div class="brand-card reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/blueflowerco.png" alt="BlueFlowerCo" class="brand-logo-img">
           </div>
         </div>
@@ -714,7 +713,7 @@
       <!-- BeingTopper -->
       <div class="brand-card reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/beingtopper.png" alt="BeingTopper" class="brand-logo-img">
           </div>
         </div>
@@ -743,7 +742,7 @@
       <!-- Henry Harvin -->
       <div class="brand-card reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/henryharvin.png" alt="Henry Harvin" class="brand-logo-img">
           </div>
         </div>
@@ -772,7 +771,7 @@
       <!-- Teamology -->
       <div class="brand-card reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/teamology.png" alt="Teamology Media" class="brand-logo-img">
           </div>
         </div>
@@ -801,7 +800,7 @@
       <!-- Digibloq -->
       <div class="brand-card reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/digibloq.png" alt="Digibloq" class="brand-logo-img">
           </div>
         </div>
@@ -840,7 +839,7 @@
       <!-- Vedic Math School -->
       <div class="brand-card reveal">
         <div class="brand-top">
-          <div class="brand-logo-circle">
+          <div class="brand-logo-wrap">
             <img src="assets/logos/vedicmathschool.png" alt="Vedic Math School" class="brand-logo-img">
           </div>
         </div>
